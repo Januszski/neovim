@@ -1,10 +1,16 @@
 return {
+  {
+    "L3MON4D3/LuaSnip",
+    config = function()
+      require("luasnip").setup({})
+    end,
+  },
   -- Create annotations with one keybind, and jump your cursor in the inserted annotation
   {
     "danymat/neogen",
     keys = {
       {
-        "<leader>cc",
+        "<leader>cn",
         function()
           require("neogen").generate({})
         end,
@@ -17,10 +23,10 @@ return {
   -- Incremental rename
   {
     "smjonas/inc-rename.nvim",
-    cmd = "IncRename",
-    config = true,
+    config = function()
+      require("inc_rename").setup()
+    end,
   },
-
   -- Refactoring tool
   {
     "ThePrimeagen/refactoring.nvim",
@@ -60,7 +66,7 @@ return {
     "monaqa/dial.nvim",
     -- stylua: ignore
     keys = {
-      { "<C-a>", function() return require("dial.map").inc_normal() end, expr = true, desc = "Increment" },
+      { "<C-c>", function() return require("dial.map").inc_normal() end, expr = true, desc = "Increment" },
       { "<C-x>", function() return require("dial.map").dec_normal() end, expr = true, desc = "Decrement" },
     },
     config = function()

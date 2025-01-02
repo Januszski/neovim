@@ -60,6 +60,8 @@ keymap.set("v", "<C-Up>", ":m .-2<CR>", opts)
 keymap.set("x", "<C-Down>", ":move '>+1<CR>gv-gv", opts)
 keymap.set("x", "<C-Up>", ":move '<-2<CR>gv-gv", opts)
 
+keymap.set("n", "<leader>rn", ":IncRename ")
+
 -- Diagnostics
 keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
