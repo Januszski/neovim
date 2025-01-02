@@ -19,7 +19,7 @@
 
 ### UI
 - :Noice to see message history
-- <Tab> <Shift-Tab> move forward and backwards between open buffers
+- Tab Shift-Tab move forward and backwards between open buffers
 
 ## Keymaps
 - dw - delete till word backwards
